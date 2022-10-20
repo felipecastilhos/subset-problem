@@ -116,13 +116,13 @@ fun testCase5(subsetLabda: (IntArray) -> List<List<Int>>) {
 }
 
 //A test case that breaks the code with out of memory exception. This is not being used in the Main. It's only here as documentation.
-fun testCase4(subsetLabda: (IntArray) -> List<List<Int>>) {
+fun testCase6(subsetLabda: (IntArray) -> List<List<Int>>) {
     val input = mutableListOf<Int>()
 
     for(i in 1..25) { 
         input.add(i)
     }
-    val solutionOutput = subsetLabda.invoke(input)
+    subsetLabda.invoke(input.toIntArray())
 }
 
 
